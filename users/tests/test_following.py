@@ -289,7 +289,7 @@ class TestFollowChange:
         assert existent_user.followers.count() == 0, msg_pattern.format(
             pytest.msg['needless_following'])
 
-    def test_follow_nonexistant_user(self, user_client, existent_user):
+    def test_follow_nonexistent_user(self, user_client, existent_user):
         msg_pattern = f'При попытке подписаться на несуществующего пользователя {{}}'
 
         http_status, app_status, response_body = self.post(
